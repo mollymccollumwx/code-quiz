@@ -1,5 +1,6 @@
 body {
     background-color: lightgrey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -12,3 +13,4 @@ p {
 #homepage {
     margin: 50px;
 }
+

@@ -21,18 +21,19 @@
     <!-- Nav Bar -->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="highscores.html">View Highscores</a>
-        <span class="navbar-brand mb-0 h1 float-right">Timer</span>
+        <span class="navbar-brand mb-0 h1 float-right">Time: <span id="timer">0</span>
       </nav>
 
 
-    <main class="container m-5">
+    <main class="container">
       
-
+    <!-- start page -->
+      <section id="homepage">
       <div class="row">
         <div
           class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 float-md-center"
         >
-          <div class="jumbotron" id="homepage">
+          <div class="jumbotron">
             <h1>Coding Quiz Challenge</h1>
             <p class="lead">
               Try to answer the following code-related questions within the time
@@ -40,17 +41,32 @@
               by ten seconds!
             </p>
             <p class="lead">
-              <a class="btn btn-primary btn-lg" role="button" type="submit"
+              <a class="btn btn-primary btn-lg" role="button" type="submit" id="start-button"
                 >Start Quiz!</a
               >
             </p>
           </div>
         </div>
       </div>
+      </section>
 
-      <div class="quiz">
-          
+
+      <!-- Questions
+      <section id="quiz-questions">
+      <div class="row">
+        <div
+          class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 float-md-center"
+        >
+          <div class="jumbotron">
+            <h1 id="question">test </h1>
+            <p class="lead" id="answer-choices"></p>
+          </div>
+        </div>
       </div>
+    </section> -->
+
+
+      
 
     </main>
     <!-- Javascript file reference -->
