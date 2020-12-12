@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Code Quiz Homepage</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/style.css">
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Code Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap style reference -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <!-- CSS Stylesheet reference  -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
 
-        <main class="container">
-            
-        </main>
-        
-        <script src="quiz.js"></script>
-    </body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="highscores.html">View Highscores</a>
+        <span class="navbar-brand mb-0 h1 float-right">Timer</span>
+      </nav>
+
+
+    <main class="container m-5">
+      
+
+      <div class="row">
+        <div
+          class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 float-md-center"
+        >
+          <div class="jumbotron" id="homepage">
+            <h1>Coding Quiz Challenge</h1>
+            <p class="lead">
+              Try to answer the following code-related questions within the time
+              limit. Keep in mind that incorrect answers will penalize your scoretime
+              by ten seconds!
+            </p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" role="button" type="submit"
+                >Start Quiz!</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz">
+          
+      </div>
+
+    </main>
+    <!-- Javascript file reference -->
+    <script src="quiz.js"></script>
+  </body>
 </html>
