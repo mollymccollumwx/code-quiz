@@ -10,7 +10,33 @@ p {
     text-align: center;
 }
 
+
+ul {
+    list-style: none;
+}
+
+
+button {
+    background-color: purple;
+    border-color: purple;
+    color: white;
+    
+}
+
+#start-button {
+    background-color: purple;
+    border-color: purple;
+    color: white;
+
+}
+
 #homepage {
     margin: 50px;
 }
+
+
+
+
+
+
 
