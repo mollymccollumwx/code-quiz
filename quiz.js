@@ -10,6 +10,7 @@ var endMessage = document.getElementById("end-message");
 var finalScore = document.getElementById("final-score");
 
 
+
 //Array of Objects containing 5 questions and answer choices
 var quizQuestions = [
   {
@@ -128,8 +129,10 @@ function checkAnswer(event) {
       timeLeft = timeLeft - 10;
     }
   }
+  //Adds one to the index so that the next question in the array is asked
   index++;
 
+  //ends the game if out of questions or the time runs out
   if (index > 4 || timeLeft === 0){
     endGame();
   } else {
@@ -138,22 +141,30 @@ function checkAnswer(event) {
 }
 
 function endGame(){
+    //removes the quiz content container and displays the end of game message
     quizContent.classList.add("d-none");
     gameOver.classList.remove("d-none");
 
-     
-
+    //Final Score
     endMessage.textContent = "Game Over!";
     finalScore.textContent = "Your final score is: " + score + ".";
 
-    
+    var highScoresButton = document.getElementById("high-scores-button");
 
+    highScoresButton.addEventListener("click", function(){
+        var initials = document.getElementById("input").value;
 
+         localStorage.setItem("initials" , initials);
 
+         localStorage.getItem("initials");
 
-
+         window.location.replace("highscores.html");
+    })
   
 }
+
+
+
 
 
 
