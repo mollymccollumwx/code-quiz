@@ -1,4 +1,4 @@
-//HTML Elements
+//HTML Elements: DOM Manipulation
 var homepage = document.getElementById("homepage");
 var startButton = document.getElementById("start-button");
 var timerEl = document.getElementById("timer");
@@ -9,39 +9,37 @@ var gameOver = document.getElementById("game-over");
 var endMessage = document.getElementById("end-message");
 var finalScore = document.getElementById("final-score");
 
-
-
 //Array of Objects containing 5 questions and answer choices
 var quizQuestions = [
   {
     title: "Commonly used data types DO NOT include:",
-    choices: ["strings", "booleans", "alerts", "numbers"],
-    answer: "alerts",
+    choices: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
+    answer: "3. alerts",
   },
 
   {
     title: "The condition in an if/else statement is enclosed within _____.",
-    choices: ["quotes", "curly brackets","parentheses", "square brackets"],
-    answer: "curly brackets"
+    choices: ["1. quotes", "2. curly brackets","3. parentheses", "4. square brackets"],
+    answer: "2. curly brackets"
   },
 
   {
     title: "Arrays in JavaScript can be used to store ____.",
-    choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
-    answer: "all of the above"
+    choices: ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"],
+    answer: "4. all of the above"
     
   },
 
   {
     title:"String values must be enclosed within _____ when being assigned to variables",
-    choices: ["commas", "curly brackets", "quotes","parentheses"],
-    answer: "quotes"
+    choices: ["1. commas", "2. curly brackets", "3. quotes","4. parentheses"],
+    answer: "3. quotes"
   },
 
   {
     title: "A very useful tool used during development and debugging for printing content to the debugger is:",
-    choices: ["JavaScript", "terminal/bash", "for loops", "console log"],
-    answer: "console log"
+    choices: ["1. JavaScript", "2. terminal/bash", "3. for loops", "4. console log"],
+    answer: "4. console log"
   },
 ];
 //sets starting index of QuizQuestions Object
@@ -91,32 +89,36 @@ function askQuestions() {
   questionEl.append(question);
 
   var ulEl = document.createElement("ul");
+  //adds question list to the HTML
+  questionEl.append(ulEl);
   
-  ulEl.addEventListener("click", checkAnswer)
+  quizContent.addEventListener("click", checkAnswer)
 
   //creates a list of buttons with answer choices
   for (var i = 0; i < 4; i++){
     var listEl = document.createElement("li");
+    ulEl.appendChild(listEl);
     var buttonEl = document.createElement("button");
     buttonEl.className = "btn btn-primary btn-lg";
     buttonEl.textContent = quizQuestions[index].choices[i];
 
     //appends the button to the list
     listEl.appendChild(buttonEl);
-    ulEl.appendChild(listEl);
+    
   }
-  //adds question list to the HTML
-  questionEl.append(ulEl);
+  
   
 }
 
 //when the user selects an answer choice button
 function checkAnswer(event) {
+  console.log(event.target);
   if (event.target.matches("button")){
     //if the user selects the correct answer button
     if (event.target.textContent === quizQuestions[index].answer){
       //adds 10 to the score
       score += 10;
+      var pageLine = document.createElement("hr");
       
     }
     //if the user selects the wrong answer button

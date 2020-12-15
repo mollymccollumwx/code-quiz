@@ -1,20 +1,23 @@
 body {
-    background-color: lightgrey;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-h1 {
+nav {
+    background-color:white;
+}
+h1{
     text-align: center;
 }
+
+h3 {
+    text-align: center;
+}
+
 p {
     text-align: center;
 }
 
 ul {
     list-style: none;
-}
-.container {
-    margin: auto;
 }
 
 .btn {
