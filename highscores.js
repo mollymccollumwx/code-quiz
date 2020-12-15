@@ -4,7 +4,7 @@ var highscoresList = document.getElementById("highscores-list");
 var initialsAndScore = JSON.parse(localStorage.getItem("initialsAndScore"));
 for (var i = 0; i < initialsAndScore.length; i++){
     var h3El = document.createElement("h3");
-    h3El.textContent = initialsAndScore[i].name + ":  "+ initialsAndScore[i].points;
+    h3El.textContent = initialsAndScore[i].name + "-  "+ initialsAndScore[i].points;
     highscoresList.append(h3El);
     
 }

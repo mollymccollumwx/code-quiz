@@ -94,7 +94,7 @@ function askQuestions() {
   //adds question list to the HTML
   questionEl.append(ulEl);
   
-  quizContent.addEventListener("click", checkAnswer)
+  quizContent.addEventListener("click", checkAnswer);
 
   //creates a list of buttons with answer choices
   for (var i = 0; i < 4; i++){
@@ -106,15 +106,12 @@ function askQuestions() {
 
     //appends the button to the list
     listEl.appendChild(buttonEl);
-    
   }
-  
   
 }
 
 //when the user selects an answer choice button
 function checkAnswer(event) {
-  console.log(event.target);
   if (event.target.matches("button")){
     //if the user selects the correct answer button
     if (event.target.textContent === quizQuestions[index].answer){
@@ -174,7 +171,7 @@ function endGame(){
           localStorage.setItem("initialsAndScore" , JSON.stringify(storedScores));
 
         }
-        //sends the user to the highscore page
+        //sends the user to the highnscore page
         window.location.replace("highscores.html");
     })
   

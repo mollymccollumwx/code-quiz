@@ -1,9 +1,11 @@
+/* HTML elements */
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 nav {
     background-color:white;
 }
+/* centers all the text on page */
 h1{
     text-align: center;
 }
@@ -15,11 +17,12 @@ h3 {
 p {
     text-align: center;
 }
-
+/* removes bullet points from list */
 ul {
     list-style: none;
 }
 
+/* styles the bootstrap buttons */
 .btn {
     background-color: purple;
     border-color: purple;
@@ -36,9 +39,7 @@ ul {
     margin: 50px;
 }
 
-#highscores-list{
-    text-align: left;
-}
+
 
 
 
