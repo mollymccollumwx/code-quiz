@@ -1,21 +1,21 @@
 
-
- var highscoresList = document.getElementById("highscores-list");
-  
-// var initialsAndScoresEl = JSON.parse(localStorage.getItem("storedScores"));
-  
-// highscoresList.textContent = storedScores[0];
-console.log("welcome to highscores")
-
+//takes the initials and scores out of local storage and appends them to the page
+var highscoresList = document.getElementById("highscores-list");
 var initialsAndScore = JSON.parse(localStorage.getItem("initialsAndScore"));
 for (var i = 0; i < initialsAndScore.length; i++){
-    var pEl = document.createElement("p");
-    pEl.textContent = initialsAndScore[i].name + ":  "+ initialsAndScore[i].points;
-    highscoresList.append(pEl);
-    // create an element
-    // give content
-    //append to page
+    var h3El = document.createElement("h3");
+    h3El.textContent = initialsAndScore[i].name + ":  "+ initialsAndScore[i].points;
+    highscoresList.append(h3El);
+    
 }
+
+//event listener for the Clear High Scores Button
+var clearScoreButton = document.getElementById("clear-score");
+clearScoreButton.addEventListener("click", function(){
+    localStorage.clear();
+    location.reload();
+})
+
 
     
   

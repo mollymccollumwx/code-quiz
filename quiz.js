@@ -161,12 +161,19 @@ function endGame(){
         var initialsAndScore = {name: initials, 
                                 points: score};
 
-
+        if (localStorage.getItem("initialsAndScore") === null){
         storedScores.push(initialsAndScore);
+        localStorage.setItem("initialsAndScore" , JSON.stringify(storedScores));
+        } else {
+          storedScores = JSON.parse(localStorage.getItem("initialsAndScore"));
+          storedScores.push(initialsAndScore);
+          localStorage.setItem("initialsAndScore" , JSON.stringify(storedScores));
+
+        }
 
         console.log(storedScores);
 
-        localStorage.setItem("initialsAndScore" , JSON.stringify(storedScores));
+        
 
         window.location.replace("highscores.html");
     })
