@@ -50,9 +50,6 @@ var timeLeft = 75;
 var score = 0;
 
 
-
-
-
 //waits for user to click to start game
 startButton.addEventListener("click", startQuiz);
 
@@ -70,11 +67,13 @@ function startQuiz() {
   askQuestions();
 }
 
+//countdown timer
 function timer (){
   var timerInterval = setInterval(function(){
     timeLeft--;
     timerEl.textContent = timeLeft;
 
+    //stops the clock at zero and ends the game
     if (timeLeft === 0){
       clearInterval(timerInterval);
       endGame();
@@ -120,7 +119,7 @@ function checkAnswer(event) {
     //if the user selects the correct answer button
     if (event.target.textContent === quizQuestions[index].answer){
       //adds 10 to the score
-      score += 10;
+      score += 20;
     }
     //if the user selects the wrong answer button
     else {
@@ -151,30 +150,31 @@ function endGame(){
     //Final Score
     endMessage.textContent = "Game Over!";
     finalScore.textContent = "Your final score is: " + score + ".";
-   
-  var highScoresButton = document.getElementById("high-scores-button");
+
+   //targets the submit button at the end of the game
+    var highScoresButton = document.getElementById("high-scores-button");
 
     highScoresButton.addEventListener("click", function(){
+        //takes in user input after the button is clicked
         var initials = document.getElementById("input").value;
+        //empty array to pass input and score into
         var storedScores = [];
-
+        //object of initials and scores to pass into empty array
         var initialsAndScore = {name: initials, 
                                 points: score};
 
+        //putting the initials/score into local storage if there is nothing in there
         if (localStorage.getItem("initialsAndScore") === null){
         storedScores.push(initialsAndScore);
         localStorage.setItem("initialsAndScore" , JSON.stringify(storedScores));
+        //adding the initials/score to the array that already has information and putting it in local storage
         } else {
           storedScores = JSON.parse(localStorage.getItem("initialsAndScore"));
           storedScores.push(initialsAndScore);
           localStorage.setItem("initialsAndScore" , JSON.stringify(storedScores));
 
         }
-
-        console.log(storedScores);
-
-        
-
+        //sends the user to the highscore page
         window.location.replace("highscores.html");
     })
   
