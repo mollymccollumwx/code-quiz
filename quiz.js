@@ -50,6 +50,9 @@ var timeLeft = 75;
 var score = 0;
 
 
+
+
+
 //waits for user to click to start game
 startButton.addEventListener("click", startQuiz);
 
@@ -118,8 +121,6 @@ function checkAnswer(event) {
     if (event.target.textContent === quizQuestions[index].answer){
       //adds 10 to the score
       score += 10;
-      var pageLine = document.createElement("hr");
-      
     }
     //if the user selects the wrong answer button
     else {
@@ -150,17 +151,24 @@ function endGame(){
     //Final Score
     endMessage.textContent = "Game Over!";
     finalScore.textContent = "Your final score is: " + score + ".";
-
-    var highScoresButton = document.getElementById("high-scores-button");
+   
+  var highScoresButton = document.getElementById("high-scores-button");
 
     highScoresButton.addEventListener("click", function(){
         var initials = document.getElementById("input").value;
+        var storedScores = [];
 
-         localStorage.setItem("initials" , initials);
+        var initialsAndScore = {name: initials, 
+                                points: score};
 
-         localStorage.getItem("initials");
 
-         window.location.replace("highscores.html");
+        storedScores.push(initialsAndScore);
+
+        console.log(storedScores);
+
+        localStorage.setItem("initialsAndScore" , JSON.stringify(storedScores));
+
+        window.location.replace("highscores.html");
     })
   
 }
