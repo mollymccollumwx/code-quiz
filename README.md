@@ -1,91 +1,52 @@
-# 04 Web APIs: Code Quiz
+# Code Quiz
 
-## Your Task
+This web page generates a timed quiz to test the user's knowledge of JavaScript fundamentals. The interactive coding challenge is powered by JavaScript with dynamically updated HTML. The page is styled with Bootstrap as well as a minimal amount of CSS. The developer was asked to construct the following: 
 
-As you proceed in your journey to becoming a full-stack web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+* Timer function that starts when the first question is presented
+* Tens seconds are subtracted from the clock if the user answers a questions incorrectly
+* The quiz ends after five questions or if the timer hits zero
+* When the game is over, ask users to save their initials and display it on a high scores page
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+# Installation
+No installation is necessary. The code for this webpage can be found at [Github](https://github.com/mollymccollumwx/code-quiz). The [deployed website](https://mollymccollumwx.github.io/code-quiz/) features a simple code quiz with a clean, minimal design. 
 
+# Usage
+The user is greeted by a welcome message explaining the rules of the game. 
 
-## User Story
+![Start Page](./images/homepage.png)
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+After pressing the start button, the user is shown the first question and the timer starts counting down from 75.
 
+![First Question Page](./images/questions-one.png)
 
-## Acceptance Criteria
+After five questions are answered or the timer reaches 0, the user is shown a "Game Over" message and their score. The user is asked to enter their initials. 
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
+![Game Over Page](./images/gameover.png)
 
+After submitting their initials, the user is sent to a page that lists the high scores. 
 
-## Mock-Up
+![High Scores Page](./images/highscores-list.png)
 
-The following animation demonstrates the application functionality:
+The user has the option to clear the list of high scores or go back to the beginning of the quiz. 
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+![Cleared High Scores Page](./images/highscores-clear.png)
 
 
-## Grading Requirements
+# Credits
 
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+This webpage was created while enrolled at the Georgia Tech Coding Bootcamp. Contributors include TAs and tutors who helped debug the code. Special shout-out to Pete Kriengsiri in the student study group who helped with the logic of the local storage for the high scores. 
 
 
-## Review
+# License 
 
-You are required to submit BOTH of the following for review:
+MIT License
 
-* The URL of the functional, deployed application.
+Copyright (c) [2020] [Molly M]
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
